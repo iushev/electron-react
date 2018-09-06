@@ -1,0 +1,7 @@
+.match .gameSelector {
+    flex: 0 0 auto;
+}
+
+.match .gameNavigator {
+    flex: 1 1 auto;
+}

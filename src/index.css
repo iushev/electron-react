@@ -1,5 +1,75 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+* {
+    box-sizing: border-box;
+}
+
+/*
+html, body, button, input, select, textarea {
+    font: 14px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 18px;
+}
+*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.update-available {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.update-available > div {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.Resizer {
+    background: #eaeaea;
+    /* z-index: 1; */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.Resizer.horizontal {
+    height: 5px;
+    /* border-top: 1px solid #e5e5e5; */
+    /* border-bottom: 1px solid #e5e5e5; */
+    cursor: row-resize;
+    width: 100%;
+}
+
+.Resizer.vertical {
+    width: 5px;
+    /* border-left: 1px solid #e5e5e5; */
+    /* border-right: 1px solid #e5e5e5; */
+    cursor: col-resize;
+}
+
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+
+.Resizer.disabled:hover {
+  border-color: transparent;
 }

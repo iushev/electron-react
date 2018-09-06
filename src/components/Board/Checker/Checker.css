@@ -1,0 +1,48 @@
+.checker {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.checker::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.checker.hit {
+    transform: rotate(180deg);
+}
+
+.checker .image::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.checker .image {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.checker .image.white {
+    background-image: url('./piece-white.gif');
+
+}
+
+.checker .image.black {
+    background-image: url('./piece-black.gif');
+}

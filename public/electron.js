@@ -1,9 +1,10 @@
-const { app, BrowserWindow } = require('electron');
+const { app } = require('electron');
 const { autoUpdater, NoOpLogger } = require('electron-updater');
 const url = require('url');
 const path = require('path');
 const debug = require('debug')('electron:main');
 const registerUpdateListeners = require('../main/autoUpdaterListeners');
+const MainWindow = require('../main/mainWindow');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,7 +15,7 @@ autoUpdater.logger = new NoOpLogger();
 
 function createWindow() {
     // Create the browser window.
-    win = new BrowserWindow({
+    win = new MainWindow({
         show: false,
     });
 
@@ -23,7 +24,7 @@ function createWindow() {
         pathname: path.join(__dirname, '/../build/index.html'),
         protocol: 'file:',
         slashes: true,
-    })
+    });
     debug('startUrl:',  startUrl);
     win.loadURL(startUrl);
 
@@ -31,18 +32,18 @@ function createWindow() {
     win.webContents.once('did-finish-load', () => {
         debug('Show main window.');
         win.show();
+
+        // Open the DevTools in development mode.
+        if (process.env.NODE_ENV === 'development') {
+            debug('Open the DevTools.');
+            win.webContents.openDevTools();
+        }
+
         autoUpdater.checkForUpdates();
     });
 
     // register listeners
     registerUpdateListeners(win);
-    // registerIpcListeners(win);
-
-    // Open the DevTools in development mode.
-    if (process.env.NODE_ENV === 'development') {
-        debug('Open the DevTools.');
-        win.webContents.openDevTools();
-    }
 
     // Emitted when the window is closed.
     win.on('closed', () => {

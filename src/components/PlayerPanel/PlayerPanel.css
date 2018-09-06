@@ -1,0 +1,43 @@
+.PlayerPanel {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.Player, .Pips {
+    flex: 0 0 auto;
+}
+
+.Score {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.Player, .Score, .Pips {
+    display: inline-block;
+    /* padding: 10px; */
+}
+
+.whitePlayer, .blackPlayer {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.whitePlayer {
+    background-image: url('./white.gif');
+}
+.blackPlayer {
+    background-image: url('./black.gif');
+}
+
+.PlayerName {
+    /* display: inline-block; */
+    margin-left: 5px;
+    /* line-height: 24px; */
+    /* vertical-align: middle; */
+}

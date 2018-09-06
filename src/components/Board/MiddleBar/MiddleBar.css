@@ -1,0 +1,20 @@
+.MiddleBar {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 6.666666667%;
+    background-color: #5e4733;
+}
+
+.MiddleBar .pointWrapper {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.MiddleBar .top {
+    padding-bottom: 8%;
+}
+
+.MiddleBar .bottom {
+    padding-top: 8%;
+}

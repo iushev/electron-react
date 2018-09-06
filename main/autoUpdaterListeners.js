@@ -1,3 +1,4 @@
+const { ipcMain } = require('electron');
 const { autoUpdater } = require('electron-updater');
 const debug = require('debug')('electron:main');
 
@@ -34,5 +35,10 @@ module.exports = (win) => {
     autoUpdater.on('update-downloaded', (info) => {
         debug('Update downloaded.');
         win.webContents.send('autoUpdater:update-downloaded', info);
+    });
+
+    ipcMain.on('install-update',  () => {
+        debug('Installing update.');
+        autoUpdater.quitAndInstall();
     });
 };

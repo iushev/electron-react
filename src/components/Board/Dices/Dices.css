@@ -1,0 +1,19 @@
+.dice {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dices_display {
+    display: inline;
+}
+
+.dices_display .dice_rignt {
+    position: absolute;
+    margin-left: 54px;
+}

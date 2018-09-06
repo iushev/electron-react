@@ -1,0 +1,54 @@
+.dice {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+}
+
+.dice-white-1 {
+    background-image: url('./digit-1-white.png');
+}
+
+.dice-white-2 {
+    background-image: url('./digit-2-white.png');
+}
+
+.dice-white-3 {
+    background-image: url('./digit-3-white.png');
+}
+
+.dice-white-4 {
+    background-image: url('./digit-4-white.png');
+}
+
+.dice-white-5 {
+    background-image: url('./digit-5-white.png');
+}
+
+.dice-white-6 {
+    background-image: url('./digit-6-white.png');
+}
+
+.dice-black-1 {
+    background-image: url('./digit-1-black.png');
+}
+
+.dice-black-2 {
+    background-image: url('./digit-2-black.png');
+}
+
+.dice-black-3 {
+    background-image: url('./digit-3-black.png');
+}
+
+.dice-black-4 {
+    background-image: url('./digit-4-black.png');
+}
+
+.dice-black-5 {
+    background-image: url('./digit-5-black.png');
+}
+
+.dice-black-6 {
+    background-image: url('./digit-6-black.png');
+}

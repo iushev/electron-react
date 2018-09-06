@@ -6,9 +6,10 @@
   "main": "public/electron.js",
   "scripts": {
     "start": "electron .",
-    "dev": "concurrently -n build-dev,electron \"BROWSER=none PORT=3030 npm run build:dev\" \"wait-on http://localhost:3030 && NODE_ENV=development ELECTRON_START_URL=http://localhost:3030 electron .\"",
+    "start:dev": "NODE_ENV=development ELECTRON_START_URL=http://localhost:3030 electron .",
+    "dev": "concurrently -n build-dev,electron \"npm run build:dev\" \"wait-on http://localhost:3030 && npm run start:dev\"",
     "build": "react-scripts build",
-    "build:dev": "react-scripts start",
+    "build:dev": "BROWSER=none PORT=3030 react-scripts start",
     "dist:linux": "npm run build && electron-builder --linux",
     "dist:win": "npm run build && electron-builder --win --ia32"
   },
@@ -24,9 +25,24 @@
     "wait-on": "^3.0.1"
   },
   "dependencies": {
+    "@material-ui/core": "^3.0.2",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
     "debug": "^3.1.0",
     "electron-updater": "^3.1.2",
+    "flag-icon-css": "^3.0.0",
+    "material-design-icons": "^3.0.1",
+    "material-ui-pickers": "^1.0.0-rc.14",
+    "moment": "^2.22.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-splitter-layout": "^3.0.1",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0",
+    "typeface-roboto": "0.0.54"
   }
 }

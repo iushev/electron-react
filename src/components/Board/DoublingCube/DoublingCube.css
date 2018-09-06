@@ -1,0 +1,59 @@
+.DoublingCube {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.DoublingCube::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.DoublingCube .image::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.DoublingCube .image {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.DoublingCube .image.doublingCube-2 {
+    background-image: url('./doublingCube-2.png');
+}
+
+.DoublingCube .image.doublingCube-4 {
+    background-image: url('./doublingCube-4.png');
+}
+
+.DoublingCube .image.doublingCube-8 {
+    background-image: url('./doublingCube-8.png');
+}
+
+.DoublingCube .image.doublingCube-16 {
+    background-image: url('./doublingCube-16.png');
+}
+
+.DoublingCube .image.doublingCube-32 {
+    background-image: url('./doublingCube-32.png');
+}
+
+.DoublingCube .image.doublingCube-1,
+.DoublingCube .image.doublingCube-64 {
+    background-image: url('./doublingCube-64.png');
+}

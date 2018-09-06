@@ -1,0 +1,33 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "indent": ["error", 4, {"SwitchCase": 1}],
+    "quotes": ["error", "single" ],
+    "linebreak-style": ["off"],
+    "semi": ["error", "always"],
+    "no-console": ["warn"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-unused-vars": ["warn"],
+    "no-useless-escape": ["off"],
+    "no-debugger": "warn",
+    "react/prop-types": "warn",
+    "no-extra-boolean-cast": "off"
+  }
+}

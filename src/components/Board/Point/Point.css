@@ -1,0 +1,58 @@
+.point {
+    position: relative;
+    flex: 0 0 auto;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.point.game {
+    width: 16.666666667%;
+}
+
+.point.hit,
+.point.off {
+    width: 100%;
+}
+
+.point.hit {
+    transform: rotate(180deg);
+}
+
+.point.game.top.light {
+    background-image: url('./quadrant-top-triangle-light.gif')
+}
+
+.point.game.top.dark {
+    background-image: url('./quadrant-top-triangle-dark.gif')
+}
+
+.point.game.top {
+    overflow: visible;
+}
+
+.point.game.bottom.light {
+    background-image: url('./quadrant-bottom-triangle-light.gif')
+}
+
+.point.game.bottom.dark {
+    background-image: url('./quadrant-bottom-triangle-dark.gif')
+}
+
+.point.game.top .pointLabel,
+.point.game.bottom .pointLabel {
+    position: absolute;
+    line-height: 1em;
+    color: #ffffff;
+    font-size: 1.6vh;
+    width: 100%;
+    text-align: center;
+}
+
+.point.game.top .pointLabel {
+    top: -1.6vh;
+}
+
+.point.game.bottom .pointLabel {
+    bottom: -1.6vh;
+}
