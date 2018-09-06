@@ -1,0 +1,32 @@
+{
+  "appId": "international.backgammon.app",
+  "productName": "Backgammon",
+  "asar": true,
+  "files": [
+    "build/**/*",
+    "main/**/*",
+    "assets/**/*"
+  ],
+  "win": {
+    "icon": "assets/icons/win/app256x256.ico",
+    "publish": {
+      "provider": "generic",
+      "url": "http://backgammon.international/downloads"
+    }
+  },
+  "nsis": {
+    "oneClick": false,
+    "displayLanguageSelector": true,
+    "language": "1033",
+    "multiLanguageInstaller": false
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "assets/icons/png",
+    "category": "Game",
+    "publish": {
+      "provider": "generic",
+      "url": "http://backgammon.international/downloads"
+    }
+  }
+}

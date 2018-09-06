@@ -1,0 +1,32 @@
+{
+  "name": "backgammon",
+  "version": "1.0.0",
+  "description": "A sports backgammon game.",
+  "homepage": "./",
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently -n build-dev,electron \"BROWSER=none PORT=3030 npm run build:dev\" \"wait-on http://localhost:3030 && NODE_ENV=development ELECTRON_START_URL=http://localhost:3030 electron .\"",
+    "build": "react-scripts build",
+    "build:dev": "react-scripts start",
+    "dist:linux": "npm run build && electron-builder --linux",
+    "dist:win": "npm run build && electron-builder --win --ia32"
+  },
+  "author": "Ivaylo Ushev",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.3",
+    "electron-devtools-installer": "^2.2.4",
+    "eslint": "^5.5.0",
+    "react-scripts": "^1.1.5",
+    "wait-on": "^3.0.1"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "electron-updater": "^3.1.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
